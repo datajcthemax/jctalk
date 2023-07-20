@@ -13,6 +13,7 @@ export default async function List() {
       {result.map((post, index) => (
         <div className="list-item" key={index}>
           <Link href={`/detail/${result[index]._id}`}>{post.title}</Link>
+          <Link href={`/edit/${result[index]._id}`}>✏️</Link>
           <p>{post.date}</p>
         </div>
       ))}
